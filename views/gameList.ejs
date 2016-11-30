@@ -1,0 +1,29 @@
+<% include partials/Header.ejs%>
+
+
+
+<h1><%= title %></h1>
+
+<a href="/gameList/add">Add a game</a>
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>companyName</th>
+
+    </tr>
+    <% for (var i=0; i < gameList.length; i++) { %>
+    <tr>
+        <td><%= gameList[i].game %></td>
+        <td><%= gameList[i].companyName %></td>
+
+        <td><a href="editGame.ejs"<%= gameList[i]._id %>>Edit</a></td>
+        <td><a href="/routes/gameList/delete"<%= gameList[i]._id %> class="confirmation">Delete</a></td>
+    </tr>
+    <% } %>
+</table>
+
+
+
+
+
+<% include partials/Footer.ejs%>

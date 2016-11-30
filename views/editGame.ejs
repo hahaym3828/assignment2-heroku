@@ -1,0 +1,17 @@
+<% include partials/header.ejs %>
+<h1>Drink Details</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="game" class="col-sm-2 control-label">game:</label>
+        <input game="game" id="game" required value="<%= gameList.game %>" />
+    </div>
+    <div class="form-group">
+        <label for="companyName" class="col-sm-2 control-label">companyName:</label>
+        <input game="companyName" id="companyName" required value="<%= gameList.companyName %>" />
+    </div>
+
+    <button class="btn btn-success col-sm-offset-2">Save</button>
+</form>
+
+<% include partials/footer.ejs %>
